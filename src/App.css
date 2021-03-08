@@ -1,0 +1,323 @@
+*{
+    box-sizing: border-box;
+    color: #545f78;
+}
+a{
+    text-decoration: none;
+}
+select{
+    width: 250px;
+    height: 40px;
+    margin: 16px  auto;
+    float: right;
+    text-align: center;
+}
+button{
+    width: 250px;
+    height: 40px;
+    text-align: center;
+}
+form{
+    width: 500px;
+    margin: 10px auto;
+    border: 2px solid #f3eaea;
+    padding: 10px;
+    font-size: 19px;
+    font-family: "Arial Black", Gadget, sans-serifpx;
+    color: #545f78;
+    text-shadow: #a3a3a3 9px 12px 11px;
+    box-shadow: #A3A3A3 0px 23px 17px -15px;
+}
+.d-table{
+    display: table;
+    width: 1140px;
+    border-collapse: collapse;
+    text-align: center;
+    box-shadow: #A3A3A3 0px 23px 17px -15px;
+    margin: 10px auto;
+}
+.d-tr{
+    display: table-row;
+}
+.d-td{
+    height: 50px;
+    width: 190px;
+    display: table-cell;
+    text-align: left;
+    border: none;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serifpx;
+    color: #545f78;
+
+}
+.d-td:not(.no-p){
+    padding: 0px;
+}
+.taskWrap {
+    background-color: lime;
+    width: 190px;
+    display: grid;
+    grid-template-columns: 150px 40px;
+    grid-template-areas:'content sidebar'
+}
+.cl-btn-7:nth-child(2){
+    grid-area: sidebar;
+}
+.task:nth-child(3){
+    grid-area: content;
+}
+.event {
+    text-align: center;
+    line-height: 40px;
+    overflow-x: hidden;
+}
+select, .css-button, .cancelButton, .createlButton, .modalWindow button  {
+    font-family: Arial;
+    color: #777777;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px #dcdcdc solid;
+    padding: 10px 18px;
+    background: linear-gradient(180deg, #ededed 5%, #dfdfdf 100%);
+    text-shadow: 1px 1px 1px #ffffff;
+    box-shadow: 1px 12px 10px -7px rgba(130, 113, 113, 0.82);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+select:hover, .css-button:hover, .cancelButton:hover, .createlButton:hover {
+    background: linear-gradient(180deg, #dfdfdf 5%, #ededed 100%);
+}
+
+.manager{
+    margin: 10px auto;
+    width: 1140px;
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.4fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". . .";
+    font-size: 50px;
+    font-family: "Arial Black", Gadget, sans-serifpx;
+    color: #545f78;
+    text-shadow: #a3a3a3 9px 12px 11px;
+}
+.containerName, .participants,.containerDay, .containerTime, .containerButtons{
+    height: 70px;
+    line-height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". .";
+}
+.createlButton, .cancelButton,.modalWindow button{
+    margin: 20px auto;
+    width: 150px;
+    height: 40px;
+}
+.eventName {
+    resize: none;
+    height: 50px;
+    width: 250px;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 23px;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 8px;
+    box-shadow: -1px 0px 15px rgba(66,66,66,.75);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.0);
+}
+.containerButtons div {
+    margin: 0 auto;
+    width: 150px;
+    height: 40px;
+}
+.addevent {
+    display: flex;
+    margin: 16px auto;
+    height: 40px !important;
+    text-align: center;
+    line-height: 43px;
+
+}
+.addevent a{
+    display: flex;
+    height: 40px;
+}
+.taskWrap {
+    border: 1px solid rgba(13,49,74,0.39);
+    background-color: #1EF728;
+    height: 50px;
+}
+.modal {
+    height: 100%;
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    /*pointer-events: none;  элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+.modalWindow {
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    background-color: white;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    text-align: center;
+}
+.confirmMessage { grid-area: 1 / 1 / 2 / 3; }
+.noButton { grid-area: 2 / 1 / 3 / 2; }
+.yesButton { grid-area: 2 / 2 / 3 / 3; }
+.confirmMessage{
+    margin: auto;
+    font-size: 19px;
+    font-family: "Arial Black", Gadget, sans-serifpx;
+    color: #545f78;
+    text-shadow: #a3a3a3 9px 12px 11px;
+}
+
+.yes:hover {
+    background: linear-gradient(180deg, #c81414 5%, #ff0000 100%);
+}
+.no:hover {
+    background: linear-gradient(180deg, #14c714 5%, #00ff00 100%);
+}
+.errorMessage{
+    position: absolute;
+    width: 100%;
+    background-color: #f39a9a80;
+    color: #c81414;
+    font-size: 19px;
+    font-family: "Arial Black", Gadget, sans-serifpx;
+    line-height: 50px;
+    display: grid;
+    grid-template-columns: 1.9fr 0.1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". .";
+}
+
+.cl-btn-2 {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+.cl-btn-2 div {
+    cursor: pointer;
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+.cl-btn-2 .leftright {
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: #b73333;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    transition: all .3s ease-in;
+}
+.cl-btn-2 .rightleft {
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: #b73333;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    transition: all .3s ease-in;
+}
+.cl-btn-2 .close-btn {
+    margin: 54px 0 0 -5px;
+    position: absolute;
+    color: #b73333;
+    font-family: Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .3s ease-in;
+    opacity: 0;
+}
+.cl-btn-2 div:hover .leftright {
+    transform: rotate(-45deg);
+    background-color: #fffcfc;
+}
+.cl-btn-2 div:hover .rightleft {
+    transform: rotate(45deg);
+    background-color: #ffffff;
+}
+.cl-btn-2 div:hover .close-btn {
+    opacity: 1;
+}
+
+.cl-btn-7 {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    margin: 5px auto;
+    cursor: pointer;
+    font-family: Arial;
+}
+.cl-btn-7:before {
+    content: '+';
+    color: #40b733;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(45deg);
+    font-size: 50px;
+    line-height: 1;
+    top: -5px;
+    left: 6px;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+}
+.cl-btn-7:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: #37b733;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+    transform: scale(0.01);
+}
+.cl-btn-7:hover:after {
+    transform: scale(1);
+}
+.cl-btn-7:hover:before {
+    transform: scale(0.8) rotate(45deg);
+    color: #fff;
+}
+.days, .time{
+    background-color: #dcdcdc ;
+}
