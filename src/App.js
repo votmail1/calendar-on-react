@@ -9,9 +9,9 @@ function App() {
         <BrowserRouter>
                 <div className="App">
                     <Switch>
-                        <Route path='/addevent' component={NewEvent}/>
-                        <Route path='/calendar' component={Calendar}/>
-                        <Route path='' component={Calendar}/>
+                        <Route exact path='https://votmail1.github.io/calendar-on-react/addevent' component={NewEvent}/>
+                        <Route exact path='https://votmail1.github.io/calendar-on-react/calendar' component={Calendar}/>
+                        <Route exact path='https://votmail1.github.io/calendar-on-react/' component={Calendar}/>
                     </Switch>
                 </div>
         </BrowserRouter>

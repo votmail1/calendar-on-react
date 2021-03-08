@@ -107,7 +107,7 @@ export default class NewEvent extends Component {
                     </select></div>
                     <div className='containerButtons'>
                         <div>
-                            <NavLink to='/calendar'>
+                            <NavLink to='https://votmail1.github.io/calendar-on-react/calendar'>
                                 <button className='cancelButton'>
                                     Cancel
                                 </button>

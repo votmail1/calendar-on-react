@@ -19,7 +19,7 @@ const Menu = (props) => {
                 {option}
             </select>
             <div className='addevent'>
-                <NavLink to='/addevent'>
+                <NavLink to='https://votmail1.github.io/calendar-on-react/addevent'>
                     <button className="css-button" id="eventButton">
                         Event +
                     </button>
