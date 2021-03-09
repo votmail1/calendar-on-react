@@ -8,7 +8,11 @@ class CalendarTable extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: (getTasksList()),
+            data : getTasksList() || [{
+                "participants": "",
+                "name": "",
+                "date": ""
+            }],
             warning: false
         }
     }
@@ -33,13 +37,18 @@ class CalendarTable extends Component {
         });
     }
     date = ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00',];
+    today = new Date();
+    dd = String(this.today.getDate()).padStart(2, '0');
+    mm = String(this.today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    yyyy = this.today.getFullYear();
 
+    today = this.dd + '/' + this.mm + '/' + this.yyyy;
     render() {
         return (
             <>
                 <div className="d-table">
                     <div className="d-tr">
-                        <div className="d-td">{this.props.i}</div>
+                        <div className="d-td">{'today is: '+ this.today}</div>
                         <div className="d-td days">Mon</div>
                         <div className="d-td days">Tue</div>
                         <div className="d-td days">Wed</div>

@@ -8,7 +8,11 @@ export default class NewEvent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: (getTasksList()),
+            data: getTasksList() || [{
+                "participants": "",
+                "name": "",
+                "date": ""
+            }],
             participants: [
                 'Mariya, Bob, Alex',
                 'Steve, Bill, Elon',
@@ -107,7 +111,7 @@ export default class NewEvent extends Component {
                     </select></div>
                     <div className='containerButtons'>
                         <div>
-                            <NavLink to='https://votmail1.github.io/calendar-on-react/calendar'>
+                            <NavLink to={process.env.PUBLIC_URL + '/calendar'}>
                                 <button className='cancelButton'>
                                     Cancel
                                 </button>

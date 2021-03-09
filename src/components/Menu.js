@@ -3,7 +3,11 @@ import {getTasksList} from "../connection/getTasksList";
 import React from "react";
 
 const Menu = (props) => {
-    const data = getTasksList();
+    const data = getTasksList() ? getTasksList() : [{
+        "participants": "",
+        "name": "",
+        "date": ""
+    }];
     let participants = '';
     data.map((a) => participants += ',' + a.participants);
     participants = participants.split(',').slice(1);
@@ -19,7 +23,7 @@ const Menu = (props) => {
                 {option}
             </select>
             <div className='addevent'>
-                <NavLink to='https://votmail1.github.io/calendar-on-react/addevent'>
+                <NavLink to={process.env.PUBLIC_URL + '/addevent'}>
                     <button className="css-button" id="eventButton">
                         Event +
                     </button>
