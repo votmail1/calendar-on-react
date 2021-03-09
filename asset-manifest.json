@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/calendar-on-react/static/css/main.aa329619.chunk.css",
-    "main.js": "/calendar-on-react/static/js/main.f01fba54.chunk.js",
-    "main.js.map": "/calendar-on-react/static/js/main.f01fba54.chunk.js.map",
+    "main.js": "/calendar-on-react/static/js/main.52e57b67.chunk.js",
+    "main.js.map": "/calendar-on-react/static/js/main.52e57b67.chunk.js.map",
     "runtime-main.js": "/calendar-on-react/static/js/runtime-main.8ee1ef29.js",
     "runtime-main.js.map": "/calendar-on-react/static/js/runtime-main.8ee1ef29.js.map",
-    "static/js/2.0908e0c2.chunk.js": "/calendar-on-react/static/js/2.0908e0c2.chunk.js",
-    "static/js/2.0908e0c2.chunk.js.map": "/calendar-on-react/static/js/2.0908e0c2.chunk.js.map",
+    "static/js/2.18f510f3.chunk.js": "/calendar-on-react/static/js/2.18f510f3.chunk.js",
+    "static/js/2.18f510f3.chunk.js.map": "/calendar-on-react/static/js/2.18f510f3.chunk.js.map",
     "index.html": "/calendar-on-react/index.html",
     "static/css/main.aa329619.chunk.css.map": "/calendar-on-react/static/css/main.aa329619.chunk.css.map",
-    "static/js/2.0908e0c2.chunk.js.LICENSE.txt": "/calendar-on-react/static/js/2.0908e0c2.chunk.js.LICENSE.txt"
+    "static/js/2.18f510f3.chunk.js.LICENSE.txt": "/calendar-on-react/static/js/2.18f510f3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8ee1ef29.js",
-    "static/js/2.0908e0c2.chunk.js",
+    "static/js/2.18f510f3.chunk.js",
     "static/css/main.aa329619.chunk.css",
-    "static/js/main.f01fba54.chunk.js"
+    "static/js/main.52e57b67.chunk.js"
   ]
 }
